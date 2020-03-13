@@ -91,7 +91,7 @@ const uploadDP = async (req, res) => {
         res.send(err)
     }
 }
-//setting dp
+//getting dp
 const myDP = async (req, res) => {
     try {
         res.set("Content-Type", 'image/jpeg')
@@ -180,11 +180,11 @@ const deactivate = async (req, res) => {
 }
 
 //signin with google
-const googleOauth = async (req, res) => {
-    //console.log("requested user", req.user)
-    const token = await req.user.tokenGenerator()
-    res.status(200).send({ token })
-}
+// const googleOauth = async (req, res) => {
+//     //console.log("requested user", req.user)
+//     const token = await req.user.tokenGenerator()
+//     res.status(200).send({ token })
+// }
 
 module.exports = {
     SignUp,
